@@ -1,0 +1,19 @@
+on_actions = {
+	on_startup = {
+		effect = {
+			GSF = {
+				##Variable Initiation
+				set_variable = { money_reserves = 100 }
+				
+				calculate_display_variables = yes
+			}
+			
+			CIT = {
+				##Variable Initiation
+				set_variable = { money_reserves = 100 }
+				
+				calculate_display_variables = yes
+			}
+		}
+	}
+}

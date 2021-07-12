@@ -1,0 +1,278 @@
+﻿division_template = {
+	name = "Real OGs"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 0 y = 3 }
+		infantry = { x = 0 y = 4 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 1 y = 3 }
+		infantry = { x = 1 y = 4 }
+
+	}
+	support = {
+        engineer = { x = 0 y = 0 }
+        artillery = { x = 0 y = 1 }
+	}
+	priority = 2
+}
+
+division_template = {  
+	name = "Newbies"
+
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 0 y = 3 }
+		infantry = { x = 0 y = 4 }
+	}
+	priority = 0
+}
+division_template = {  
+	name = "Regular soldiers"
+
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 0 y = 3 }
+		infantry = { x = 0 y = 4 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 1 y = 3 }
+	}
+	priority = 1
+}
+
+units = {
+	division = {
+		name = "Real OGs"
+		location = 2719
+		division_template = "Real OGs"
+		start_experience_factor = 1
+	}
+        division = {
+		name = "Real OGs"
+		location = 2719
+		division_template = "Real OGs"
+		start_experience_factor = 1
+	}
+	division = {
+		name = "Real OGs"
+		location = 2719
+		division_template = "Real OGs"
+		start_experience_factor = 1
+	}
+	division = {
+		name = "Regular soldiers"
+		location = 2719
+		division_template = "Regular soldiers"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "Regular soldiers"
+		location = 2719
+		division_template = "Regular soldiers"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "Regular soldiers"
+		location = 2719
+		division_template = "Regular soldiers"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "Regular soldiers"
+		location = 2719
+		division_template = "Regular soldiers"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "Regular soldiers"
+		location = 2719
+		division_template = "Regular soldiers"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "Regular soldiers"
+		location = 2719
+		division_template = "Regular soldiers"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "Regular soldiers"
+		location = 2719
+		division_template = "Regular soldiers"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "Regular soldiers"
+		location = 2719
+		division_template = "Regular soldiers"
+		start_experience_factor = 0.2
+	}
+	division = {
+		name = "Regular soldiers"
+		location = 2719
+		division_template = "Regular soldiers"
+		start_experience_factor = 0.2
+	}
+	division = {
+		name = "Regular soldiers"
+		location = 2719
+		division_template = "Regular soldiers"
+		start_experience_factor = 0.2
+	}
+	division = {
+		name = "Regular soldiers"
+		location = 2719
+		division_template = "Regular soldiers"
+		start_experience_factor = 0.2
+	}
+	division = {
+		name = "Regular soldiers"
+		location = 2719
+		division_template = "Regular soldiers"
+		start_experience_factor = 0.2
+	}
+	division = {
+		name = "Regular soldiers"
+		location = 2719
+		division_template = "Regular soldiers"
+		start_experience_factor = 0.2
+	}
+	division = {
+		name = "Regular soldiers"
+		location = 2719
+		division_template = "Regular soldiers"
+		start_experience_factor = 0.2
+	}
+	division = {
+		name = "Regular soldiers"
+		location = 2719
+		division_template = "Regular soldiers"
+		start_experience_factor = 0.2
+	}
+	division = {
+		name = "Regular soldiers"
+		location = 2719
+		division_template = "Regular soldiers"
+		start_experience_factor = 0.2
+	}
+	division = {
+		name = "Regular soldiers"
+		location = 2719
+		division_template = "Regular soldiers"
+		start_experience_factor = 0.2
+	}
+	division = {
+		name = "Regular soldiers"
+		location = 2719
+		division_template = "Regular soldiers"
+		start_experience_factor = 0.2
+	}
+	division = {
+		name = "Regular soldiers"
+		location = 2719
+		division_template = "Regular soldiers"
+		start_experience_factor = 0.2
+	}
+	division = {
+		name = "Newbies"
+		location = 2719
+		division_template = "Newbies"
+		start_experience_factor = 0
+	}
+	division = {
+		name = "Newbies"
+		location = 2719
+		division_template = "Newbies"
+		start_experience_factor = 0
+	}
+	division = {
+		name = "Newbies"
+		location = 2719
+		division_template = "Newbies"
+		start_experience_factor = 0
+	}
+	division = {
+		name = "Newbies"
+		location = 2719
+		division_template = "Newbies"
+		start_experience_factor = 0
+	}
+	division = {
+		name = "Newbies"
+		location = 2719
+		division_template = "Newbies"
+		start_experience_factor = 0
+	}
+	division = {
+		name = "Newbies"
+		location = 2719
+		division_template = "Newbies"
+		start_experience_factor = 0
+	}
+	division = {
+		name = "Newbies"
+		location = 2719
+		division_template = "Newbies"
+		start_experience_factor = 0
+	}
+	division = {
+		name = "Newbies"
+		location = 2719
+		division_template = "Newbies"
+		start_experience_factor = 0
+	}
+	division = {
+		name = "Newbies"
+		location = 2719
+		division_template = "Newbies"
+		start_experience_factor = 0
+	}
+	division = {
+		name = "Newbies"
+		location = 2719
+		division_template = "Newbies"
+		start_experience_factor = 0
+	}
+	division = {
+		name = "Newbies"
+		location = 2719
+		division_template = "Newbies"
+		start_experience_factor = 0
+	}
+	division = {
+		name = "Newbies"
+		location = 2719
+		division_template = "Newbies"
+		start_experience_factor = 0
+	}
+	division = {
+		name = "Newbies"
+		location = 2719
+		division_template = "Newbies"
+		start_experience_factor = 0
+	}
+	division = {
+		name = "Newbies"
+		location = 2719
+		division_template = "Newbies"
+		start_experience_factor = 0
+	}
+	division = {
+		name = "Newbies"
+		location = 2719
+		division_template = "Newbies"
+		start_experience_factor = 0
+	}
+}

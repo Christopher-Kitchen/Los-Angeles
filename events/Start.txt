@@ -1,0 +1,184 @@
+add_namespace = Start
+
+country_event = {
+	id = Start.1
+	hidden = yes
+	is_triggered_only = yes
+
+	immediate = { #Происходит сразу
+	        if = { #Если
+			limit = { #Одна из стран
+				AND = { 
+					NOT = { original_tag = SBF }
+
+				}
+			}
+			add_opinion_modifier = { 
+				target = VLA
+				modifier = friendship_of_gang_leaders
+			}
+		    }
+			add_opinion_modifier = {
+				target = RHB
+				modifier = sworn_enemy
+			}
+			add_opinion_modifier = {
+				target = KTB
+				modifier = sworn_enemy
+			}
+			add_opinion_modifier = {
+				target = FYB
+				modifier = sworn_enemy
+			}
+            			
+		}
+}
+country_event = {
+	id = Start.2
+	hidden = yes
+	is_triggered_only = yes
+
+	immediate = { #Происходит сразу
+			add_opinion_modifier = { 
+				target = GSF
+				modifier = friendship_of_gang_leaders
+			}
+			add_opinion_modifier = {
+				target = LSV
+				modifier = sworn_enemy
+			}
+            #country_event = { days = 30 id = Start.6 }			
+		}
+}
+country_event = {
+	id = Start.3
+	hidden = yes
+	is_triggered_only = yes
+
+	immediate = { #Происходит сразу
+			add_opinion_modifier = {
+				target = VLA
+				modifier = sworn_enemy
+			}			
+		}
+}
+country_event = {
+	id = Start.4
+	hidden = yes
+	is_triggered_only = yes
+
+	immediate = { #Происходит сразу
+			add_opinion_modifier = {
+				target = GSF
+				modifier = sworn_enemy
+			}			
+		}
+}
+country_event = {
+	id = Start.5
+	title = Start.5.t
+	desc = Start.5.d
+	picture = GFX_report_event_generic_rally
+	is_triggered_only = yes
+
+	option = {
+	name = Start5.a
+	army_experience = 100
+	add_equipment_to_stockpile = { type = infantry_equipment_1 amount = 500 } 
+	add_equipment_to_stockpile = { type = support_equipment_1 amount = 100 }
+	add_equipment_to_stockpile = { type = artillery_equipment_1 amount = 100 }
+	add_equipment_to_stockpile = { type = motorized_equipment_1 amount = 50 }
+}
+}
+country_event = {
+	id = Start.6
+	hidden = yes
+	is_triggered_only = yes
+	option = {
+		GSF = {country_event = { id = Start.7 } 
+		}
+        VLA = {country_event = { id = Start.7 } 
+		}
+		LSV = {country_event = { id = Start.7 } 
+		}
+		RHB = {country_event = { id = Start.7 } 
+		}
+		KTB = {country_event = { id = Start.7 } 
+		}
+		FYB = {country_event = { id = Start.7 } 
+		}
+		SBF = {country_event = { id = Start.7 } 
+		}
+	}
+}
+country_event = {
+	id = Start.7
+	hidden = yes
+	is_triggered_only = yes
+
+	immediate = { #Происходит сразу
+		if = { #Если
+			limit = { #Одна из стран
+				AND = { #Не одна из стран и не воюет с ней
+					NOT = { original_tag = RHB }
+					NOT = { has_war_with = RHB }
+					NOT = { original_tag = KTB }
+					NOT = { has_war_with = KTB }
+					NOT = { original_tag = FYB }
+					NOT = { has_war_with = FYB }
+				}
+			}
+			declare_war_on = { target = RHB type = annex_everything }
+			declare_war_on = { target = KTB type = annex_everything }
+			declare_war_on = { target = FYB type = annex_everything }
+			
+		}
+		if = { #Если
+			limit = { #Одна из стран
+				AND = { #Не одна из стран и не воюет с ней
+					NOT = { original_tag = LSV }
+					NOT = { has_war_with = LSV }
+				}
+			}
+			declare_war_on = { target = LSV type = annex_everything }
+		}
+		if = { #Если
+			limit = { #Одна из стран
+				AND = { #Не одна из стран и не воюет с ней
+					NOT = { original_tag = GSF }
+					NOT = { has_war_with = GSF }
+					NOT = { original_tag = SBF }
+					NOT = { has_war_with = SBF }
+					NOT = { original_tag = VLA }
+				}
+			}
+			declare_war_on = { target = GSF type = annex_everything }
+			declare_war_on = { target = SBF type = annex_everything }
+		}
+        if = { #Если
+			limit = { #Одна из стран
+				AND = { #Не одна из стран и не воюет с ней
+					NOT = { original_tag = VLA }
+					NOT = { has_war_with = VLA }
+					NOT = { original_tag = GSF }
+					NOT = { original_tag = SBF }
+				}
+			}
+			declare_war_on = { target = VLA type = annex_everything }
+		}
+	}
+}
+country_event = {
+	id = Start.8
+	hidden = yes
+	is_triggered_only = yes
+
+	immediate = {
+		every_country = {
+			add_to_variable = { money_reserves = 75 }
+			calculate_display_variables = yes
+		}
+		NGP = { country_event = { id = Start.8 days = 30 } }
+	}
+	
+}

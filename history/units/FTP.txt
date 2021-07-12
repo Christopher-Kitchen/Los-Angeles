@@ -1,0 +1,85 @@
+﻿division_template = {
+	name = "Rights defenders"
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 0 y = 3 }
+		infantry = { x = 0 y = 4 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 1 y = 3 }
+		infantry = { x = 1 y = 4 }
+	}
+	priority = 1
+}
+division_template = {
+	name = "Guard"
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 0 y = 3 }
+		infantry = { x = 0 y = 4 }
+	}
+	priority = 1
+}
+
+units = {
+	division = {
+		name = "Rights defenders"
+		location = 1475
+		division_template = "Rights defenders"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "Rights defenders"
+		location = 66
+		division_template = "Rights defenders"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "Rights defenders"
+		location = 885
+		division_template = "Rights defenders"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "Rights defenders"
+		location = 507
+		division_template = "Rights defenders"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "Rights defenders"
+		location = 1131
+		division_template = "Rights defenders"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "Rights defenders"
+		location = 1394
+		division_template = "Rights defenders"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "Rights defenders"
+		location = 1731
+		division_template = "Rights defenders"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "Rights defenders"
+		location = 738
+		division_template = "Rights defenders"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "Rights defenders"
+		location = 339
+		division_template = "Rights defenders"
+		start_experience_factor = 0.3
+	}
+}
+

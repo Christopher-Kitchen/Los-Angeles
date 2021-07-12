@@ -1,0 +1,6 @@
+eastern_european_gfx
+southamerican_gfx
+african_gfx
+eastern_european_2d
+southamerican_2d
+african_2d

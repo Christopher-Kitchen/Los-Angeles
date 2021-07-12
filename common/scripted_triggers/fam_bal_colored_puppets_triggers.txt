@@ -1,0 +1,26 @@
+has_cosmetic_fam_color = {
+		#Если выполняется это условие, то дальше страна меняет свой цвет. Тут прописано только это условие.
+		#А ещё я думаю, что мало кто из вас заглянет в этот файл. Поэтому оставлю тут свой дс, как эксклюзив mazdar007#6906
+    has_government = communism
+	has_civil_war = no
+	OR = {
+	has_autonomy_state = autonomy_collaboration_government
+	has_autonomy_state = autonomy_integrated_puppet
+	has_autonomy_state = autonomy_puppet
+	has_autonomy_state = autonomy_reichskommissariat
+	has_autonomy_state = autonomy_reichsprotectorate
+	is_puppet = yes
+	}
+}
+has_cosmetic_bal_color = {
+    has_government = fascism
+	has_civil_war = no
+	OR = {
+	has_autonomy_state = autonomy_collaboration_government
+	has_autonomy_state = autonomy_integrated_puppet
+	has_autonomy_state = autonomy_puppet
+	has_autonomy_state = autonomy_reichskommissariat
+	has_autonomy_state = autonomy_reichsprotectorate
+	is_puppet = yes
+	}
+}

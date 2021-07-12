@@ -1,0 +1,588 @@
+ideas = {
+political_advisor = {
+		silent_workhorse = {
+		
+		picture = GFX_silent_workhorse
+		allowed = {
+                original_tag = CIT
+            }
+			
+			traits = { silent_workhorse }
+		}
+		
+		prince_of_terror = {
+		allowed = {
+                original_tag = CIT
+	    }
+				available = {  
+					OR = {
+						NOT = { has_completed_focus = CIT_B_1 }
+						NOT = { has_completed_focus = CIT_COM_1 }
+					}
+				}
+			
+			traits = { prince_of_terror }
+		}
+		
+		backroom_backstabber = {
+		allowed = {
+                original_tag = CIT
+            }
+			
+			traits = { backroom_backstabber }
+		}
+		
+		economic_organizer = {
+		allowed = {
+		   original_tag = CIT
+        }
+		available = { NOT = { has_completed_focus = CIT_COR_1 } }
+		traits = { economic_organizer }
+        }
+		
+		face_licker = {
+		allowed = {
+		   original_tag = CIT
+        }
+		available = {
+			NOT = { 
+				OR = {
+					has_completed_focus = CIT_B_1
+					has_completed_focus = CIT_COM_2
+				}
+			}
+		}
+		traits = { face_licker }
+        }
+		
+		the_banker = {
+		allowed = {
+		   original_tag = CIT
+        }
+		available = { NOT = { has_completed_focus = CIT_COR_1 } }
+		traits = { the_banker }
+        }
+		
+		propaganda_prizuv = {
+		allowed = {
+		   original_tag = CIT
+        }
+		available = {  
+			OR = {
+				has_completed_focus = CIT_B_5
+				has_completed_focus = CIT_COM_5
+			}
+		}
+		traits = { propaganda_prizuv }
+        }
+	}
+	army_chief = {
+		Thomas_Anderson = {
+			allowed = {
+				original_tag = FTP
+			}
+			available = { has_completed_focus = FTP_R_16 }
+			traits = { army_chief_offensive_3 }
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		Daniel_Charlson = {
+			allowed = {
+				original_tag = FTP
+			}
+			traits = { army_chief_defensive_2 }
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	high_command = {
+		tenpen = {
+			ledger = army
+			allowed = {
+				original_tag = FTP
+			}
+			available = { NOT = { has_completed_focus = FTP_R_CRASH_2 } }
+			traits = { army_infantry_1 }		
+			ai_will_do = {
+				factor = 2
+			}
+		}
+		Officer_Carver = {
+			ledger = army
+			allowed = {
+				original_tag = FTP
+			}
+			traits = { army_regrouping_2 }		
+			ai_will_do = {
+				factor = 2
+			}
+		}
+		Lucas_Thompson = {
+			ledger = army
+			allowed = {
+				original_tag = FTP
+			}
+			traits = { army_entrenchment_2 }		
+			ai_will_do = {
+				factor = 2
+			}
+		}
+		Samuel_Hill = {
+			ledger = army
+			allowed = {
+				original_tag = FTP
+			}
+			traits = { army_armored_2 }		
+			ai_will_do = {
+				factor = 2
+			}
+		}
+	}
+country = {
+		FTP_sverh = {
+			picture = chi_incompetent_officers
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				army_attack_factor = 0.2
+				weekly_manpower = 10
+				army_org_factor = -0.05
+				political_power_gain = 0.2
+				improve_relations_maintain_cost_factor = 0.5
+				resistance_decay = -0.3
+				resistance_damage_to_garrison = -0.35
+			}
+		}
+		FTP_oops = {
+			picture = chi_incompetent_officers
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				weekly_manpower = -20
+				army_org_factor = -0.15
+				max_command_power = -15
+				land_reinforce_rate = -0.05
+				war_support_factor = -0.15
+				max_planning = -0.1
+				experience_gain_army_factor = -0.1
+				conscription_factor = -0.2
+			}
+		}
+		FTP_Prizuv = {
+			picture = chi_incompetent_officers
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				weekly_manpower = 50
+			}
+		}
+		FTP_Academy = {
+			picture = generic_exploit_mines
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			research_bonus = {
+				land_doctrine = 0.1
+			}
+			removal_cost = -1
+			modifier = {
+				experience_gain_army = 0.01
+			}
+		}
+		FTP_Chain = {
+			picture = chi_incompetent_officers
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				army_org_factor = 0.05
+				max_command_power = 15
+			}
+		}
+		FTP_army_idea = {
+			picture = ast_volunteer_defence_corps
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				army_org_factor = 0.05
+				land_reinforce_rate = 0.07
+				war_support_factor = 0.05
+			}
+		}
+		FTP_Army_Reform_idea = {
+			picture = generic_license_production
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				max_planning = 0.1
+				experience_gain_army_factor = 0.075
+				conscription_factor = -0.05
+			}
+		}
+		FTP_loyal_army_idea = {
+			picture = generic_manpower_bonus
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				political_power_factor = 0.1
+				army_morale_factor = 0.1
+				war_support_factor = 0.05
+			}
+		}
+		FTP_Removing_Troublesome_Soldiers = {
+			picture = generic_manpower_bonus
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				political_power_gain = -0.1
+				army_morale_factor = -0.1
+				war_support_factor = -0.05
+			}
+		}
+		FTP_Morale = {
+			picture = generic_manpower_bonus
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				political_power_gain = 0.05
+				army_morale_factor = 0.1
+				stability_factor = 0.07
+			}
+		}
+		GRI_military_woes = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = FRA_scw_intervention_nationalists_focus
+			removal_cost = -1
+			modifier = {
+				war_support_factor = -0.15
+				conscription_factor = -0.25
+				army_attack_factor = -0.10
+				army_defence_factor = -0.10
+				army_org_factor = -0.10
+			}
+		}
+		peresmotr = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = FRA_scw_intervention_nationalists_focus
+			removal_cost = -1
+			targeted_modifier = {
+				fascism_acceptance = 75
+				communism_acceptance = 75
+			}
+		}
+		to_fam = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = FRA_scw_intervention_nationalists_focus
+			removal_cost = -1
+			targeted_modifier = {
+				tag = GSF
+				attack_bonus_against = 0.1
+			}
+		}
+		to_vag_and_act = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = FRA_scw_intervention_nationalists_focus
+			removal_cost = -1
+			targeted_modifier = {
+				tag = VLA
+				attack_bonus_against = 0.1
+			}
+			targeted_modifier = {
+				tag = LSV
+				attack_bonus_against = 0.1
+			}
+		}
+		to_bal = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = FRA_scw_intervention_nationalists_focus
+			removal_cost = -1
+			targeted_modifier = {
+				tag = FYB
+				attack_bonus_against = 0.1
+			}
+			targeted_modifier = {
+				tag = RHB
+				attack_bonus_against = 0.1
+			}
+			targeted_modifier = {
+				tag = KTB
+				attack_bonus_against = 0.1
+			}
+		}
+		flexible_foreign_policy = {
+			picture = generic_flexible_foreign_policy2
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			rule = {
+				can_join_opposite_factions = yes
+			}
+			modifier = {
+				join_faction_tension = -1.0
+				improve_relations_maintain_cost_factor = -0.75
+			}
+		}
+		CIT_resist = {
+			picture = generic_flexible_foreign_policy2
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				resistance_decay = 0.3
+				resistance_damage_to_garrison = -0.1
+			}
+		}
+		osvob = {
+            allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = generic_archonism_idea
+			modifier = {
+				army_core_attack_factor = 0.15
+				army_core_defence_factor = 0.05
+                war_support_factor = 0.1
+				conscription = 0.05
+    	    }
+		}
+	}
+country = {
+		CIT_corruption = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = generic_disjointed_gov
+			removal_cost = -1
+			modifier = {
+				political_power_gain = -0.25
+				stability_factor = -0.25
+				production_speed_buildings_factor = -0.10
+				research_speed_factor = -0.15
+                consumer_goods_factor = 0.05
+			}
+		}
+		CIT_corruption_max = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = generic_disjointed_gov
+			removal_cost = -1
+			modifier = {
+			    neutrality_drift = 0.2
+				political_power_gain = 0.2
+				stability_factor = -0.3
+				production_speed_buildings_factor = -0.20
+				research_speed_factor = -0.2
+                consumer_goods_factor = -0.01
+			}
+		}
+		CIT_corruption_1 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = generic_disjointed_gov
+			removal_cost = -1
+			modifier = {
+				political_power_gain = -0.3
+				stability_factor = -0.16
+				production_speed_buildings_factor = -0.08
+				research_speed_factor = -0.12
+                consumer_goods_factor = 0.04
+			}
+		}
+		CIT_corruption_2 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = generic_disjointed_gov
+			removal_cost = -1
+			modifier = {
+				political_power_gain = -0.4
+				stability_factor = -0.12
+				production_speed_buildings_factor = -0.06
+				research_speed_factor = -0.09
+                consumer_goods_factor = 0.03
+			}
+		}
+		CIT_corruption_3 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = generic_disjointed_gov
+			removal_cost = -1
+			modifier = {
+				political_power_gain = -0.5
+				stability_factor = -0.09
+				production_speed_buildings_factor = -0.04
+				research_speed_factor = -0.06
+                consumer_goods_factor = 0.02
+			}
+		}
+		CIT_corruption_4 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = generic_disjointed_gov
+			removal_cost = -1
+			modifier = {
+				political_power_gain = -0.6
+				stability_factor = -0.05
+				production_speed_buildings_factor = -0.02
+				research_speed_factor = -0.03
+                consumer_goods_factor = 0.01
+			}
+		}
+	}
+country = {
+		GRI_boreas_archonate = {
+            allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = generic_archonism_idea
+			modifier = {
+				fascism_drift = 0.01
+                                communism_drift = 0.01
+				political_power_gain = 0.05
+				consumer_goods_factor = -0.02
+    	    }
+		}
+		CRASH_idea = {
+            allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = generic_archonism_idea
+			modifier = {
+				army_attack_factor = 0.1
+                war_support_factor = 0.1
+				political_power_gain = -0.1
+				consumer_goods_factor = 0.05
+    	    }
+		}
+		CRASH_idea_2 = {
+            allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = generic_archonism_idea
+			modifier = {
+				army_attack_factor = 0.15
+                war_support_factor = 0.15
+				political_power_gain = -0.2
+				consumer_goods_factor = 0.1
+				stability_factor = -0.05
+    	    }
+		}
+	}
+}

@@ -1,0 +1,7 @@
+﻿l_russian:
+ money_reserves_1:0 "[?money_reserves_t] $"
+ money_reserves_thousand:0 "[?money_reserves|3]K $"
+ money_reserves_million:0 "[?money_reserves_m|2]M $"
+ 
+ money_reserves_text1:0 "мани"
+ money_reserves_text:0 "§G[Get_money_reserves]"

@@ -1,0 +1,6 @@
+calculate_display_variables = {
+set_variable = { money_reserves_t = money_reserves }
+set_variable = { money_reserves_m = money_reserves }
+multiply_variable = { money_reserves_t = 1000 }
+multiply_variable = { money_reserves_m = 0.001 }
+}

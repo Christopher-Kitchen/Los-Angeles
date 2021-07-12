@@ -1,0 +1,9 @@
+BAL = {
+    color = rgb { 205 0 255 }
+    color_ui = rgb { 205 0 255 }
+}
+
+FAM = {
+    color = rgb { 0 160 0 }
+    color_ui = rgb { 0 160 0 }
+}

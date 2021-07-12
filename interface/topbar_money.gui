@@ -1,0 +1,43 @@
+guiTypes = {
+
+	containerWindowType = {
+        name = "topbar_money_menu"
+		position = { x = 0 y = 0 }	
+		
+		iconType ={
+			name ="money_value_bg"
+			spriteType = "GFX_generic_box_96"
+			position = { x = 1000 y = 5 }
+			Orientation = "UPPER_LEFT"
+		}
+		
+		instantTextBoxType = {
+			name ="money_reserves_text1"
+			position = { x= 1023 y = 8 }
+			textureFile = ""
+			font = "hoi_18mbs"
+			text = "money_reserves_text"
+			format = left
+			maxWidth = 90
+			maxHeight = 24
+			alwaystransparent = yes
+		}
+		
+		iconType = {
+			name ="economy_GDP_topbar_icon"
+			spriteType = "GFX_green_dollar_sign"
+			position = { x= 1002 y = 7 }
+			Orientation = "UPPER_LEFT"
+			pdx_tooltip = "economy_topbar_GDP_short_tt"
+			pdx_tooltip_delayed = "economy_topbar_GDP_long_tt"
+		}
+
+        ButtonType = {
+			name = "achievements_button"
+			position = { x = 1922 y = 61 }
+			quadTextureSprite ="achievements"
+			pdx_tooltip = "MENU_ACHIEVEMENTS"
+		}
+
+	}
+}

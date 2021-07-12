@@ -1,0 +1,17 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_green_dollar_sign"
+		texturefile = "gfx//interface//green_dollar_sign.dds"
+		legacy_lazy_load = no
+	}
+	
+	spriteType = {
+		name = "GFX_generic_box_96"
+		texturefile = "gfx/interface/generic_box_96.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_achievements_icon"
+		texturefile = "gfx//interface//achievements_icon.dds"
+	}
+}

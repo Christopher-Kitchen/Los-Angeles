@@ -25,9 +25,9 @@ sub_units = {
 		combat_width = 0
 
 		need = {
-			artillery_equipment = 12
+			artillery_equipment = 1
 		}
-		manpower = 300
+		manpower = 3
 		training_time = 120
 		max_organisation = 0
 		default_morale = 0.1
@@ -70,10 +70,10 @@ sub_units = {
 		combat_width = 0
 
 		need = {
-			rocket_artillery_equipment = 12
+			rocket_artillery_equipment = 1
 		}
 
-		manpower = 300
+		manpower = 3
 		training_time = 120
 		max_organisation = 0
 		default_morale = 0.1

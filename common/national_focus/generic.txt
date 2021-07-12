@@ -1733,7 +1733,7 @@ focus_tree = {
 		icon = GFX_goal_generic_demand_territory
 		x = 19
 		y = 0
-		cost = 10
+		cost = 10000
 	
 		search_filters = { FOCUS_FILTER_POLITICAL }
 	
@@ -1829,6 +1829,11 @@ focus_tree = {
 				idea = nationalism
 				days = 720
 			}
+			set_politics = {
+			ruling_party = fascism
+			elections_allowed = no
+			}
+			add_stability = -0.1
 		}
 	}
 	
@@ -1882,6 +1887,11 @@ focus_tree = {
 				idea = internationalism
 				days = 720
 			}
+			set_politics = {
+			ruling_party = communism
+			elections_allowed = no
+			}
+			add_stability = -0.1
 		}
 	}	
 
@@ -1973,7 +1983,8 @@ focus_tree = {
 				limit = { has_idea = neutrality_idea }
 				remove_ideas = neutrality_idea
 			}		
-			add_political_power = 200
+			add_political_power = 150
+			add_ideas = militarism_focus
 			add_ideas = idea_political_correctness
 		}
 	}

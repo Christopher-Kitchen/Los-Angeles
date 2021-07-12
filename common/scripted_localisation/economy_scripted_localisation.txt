@@ -1,0 +1,18 @@
+defined_text = {
+	name = Get_money_reserves
+	text = {
+	    trigger = {
+			check_variable = { money_reserves < 1 }
+		}
+		localization_key = money_reserves_1
+	}
+	text = {
+		trigger = {
+			check_variable = { money_reserves > 1000 }
+		}
+		localization_key = money_reserves_million
+	}
+	text = {
+		localization_key = money_reserves_thousand
+	}
+}

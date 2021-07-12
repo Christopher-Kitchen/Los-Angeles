@@ -1,0 +1,1038 @@
+focus_tree = {
+	id = police_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = FTP
+		}
+	}
+
+	default = no
+	
+	focus = {
+		id = FTP_N
+		icon = GFX_focus_collectivist_ethos_focus
+		x = 6
+		y = 1
+		cost = 2
+			ai_will_do = {
+			factor = 1
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			country_event = police.3
+		}
+	}
+	focus = {
+		id = FTP_R
+		icon = GFX_focus_collectivist_ethos_focus
+		prerequisite = { focus = FTP_N }
+		mutually_exclusive = { focus = FTP_P }
+		available = {
+			has_country_flag = reform
+		}
+		x = 2
+		y = 2
+		cost = 9
+			ai_will_do = {
+			factor = 1
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			add_stability = 0.1
+			add_political_power = -50
+		}
+	}
+	focus = {
+		id = FTP_P
+		icon = GFX_focus_collectivist_ethos_focus
+		prerequisite = { focus = FTP_N }
+		mutually_exclusive = { focus = FTP_R }
+		x = 10
+		y = 2
+		cost = 9
+			ai_will_do = {
+			factor = 1
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			add_stability = -0.02
+			add_political_power = 100
+		}
+	}
+	focus = {
+		id = FTP_R_1
+		icon = GFX_focus_collectivist_ethos_focus
+		prerequisite = { focus = FTP_R }
+		x = 0
+		y = 3
+		cost = 9
+			ai_will_do = {
+			factor = 1
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			if = {
+				limit = {
+					OR = {
+					has_dlc = "Together for Victory"
+					has_dlc = "Man the Guns"
+					}
+				}
+				add_autonomy_score = {
+					value = 850
+					localization = svoboda
+				}
+				else = {
+					CIT = {
+					end_puppet = FTP
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = FTP_R_2
+		icon = GFX_focus_collectivist_ethos_focus
+		prerequisite = { focus = FTP_R }
+		x = 4
+		y = 3
+		cost = 9
+			ai_will_do = {
+			factor = 1
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			load_oob = FTP_armored_car
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_1
+				amount = 750
+			}
+			add_equipment_to_stockpile = {
+				type = armored_car_equipment_1
+				amount = 50
+			}
+		}
+	}
+	focus = {
+		id = FTP_R_2_2
+		icon = GFX_focus_collectivist_ethos_focus
+		prerequisite = { focus = FTP_R_2 }
+		x = 4
+		y = 4
+		cost = 9
+			ai_will_do = {
+			factor = 1
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			army_experience = 100
+			add_war_support = 0.03
+		}
+	}
+	focus = {
+		id = FTP_CRASH
+		icon = GFX_focus_collectivist_ethos_focus
+		prerequisite = { focus = FTP_R_2 focus = FTP_P_1 }
+		x = 6
+		y = 4
+		cost = 9
+			ai_will_do = {
+			factor = 1
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			swap_ideas = {
+			remove_idea = CRASH_idea
+			add_idea = CRASH_idea_2
+			}
+		}
+	}
+	focus = {
+		id = FTP_P_1_2
+		icon = GFX_focus_collectivist_ethos_focus
+		prerequisite = { focus = FTP_P_1 }
+		x = 8
+		y = 4
+		cost = 9
+			ai_will_do = {
+			factor = 1
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			add_war_support = 0.1
+			add_stability = -0.05
+			add_political_power = -20
+		}
+	}
+	focus = {
+		id = FTP_CRASH_2
+		icon = GFX_focus_collectivist_ethos_focus
+		prerequisite = { focus = FTP_R_2_2 focus = FTP_P_1_2 }
+		prerequisite = { focus = FTP_CRASH }
+		x = 6
+		y = 5
+		cost = 9
+			ai_will_do = {
+			factor = 1
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			country_event = police.7
+		}
+	}
+	focus = {
+		id = FTP_R_CRASH_2
+		icon = GFX_focus_collectivist_ethos_focus
+		prerequisite = { focus = FTP_CRASH_2 }
+		mutually_exclusive = { focus = FTP_P_CRASH_2 }
+		available = {
+		    hidden_trigger = {
+			has_country_flag = arest
+			}
+		}
+		x = 5
+		y = 6
+		cost = 2
+			ai_will_do = {
+			factor = 1
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			custom_effect_tooltip = remove_political_advisor
+			show_ideas_tooltip = tenpen
+		}
+	}
+	focus = {
+		id = FTP_P_CRASH_2
+		icon = GFX_focus_collectivist_ethos_focus
+		prerequisite = { focus = FTP_CRASH_2 }
+		mutually_exclusive = { focus = FTP_R_CRASH_2 }
+		available = {
+		    hidden_trigger = {
+			has_country_flag = nearest
+			}
+		}
+		x = 7
+		y = 6
+		cost = 2
+			ai_will_do = {
+			factor = 1
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = FTP_R_3
+		icon = GFX_focus_collectivist_ethos_focus
+		prerequisite = { focus = FTP_R_1 }
+		x = 0
+		y = 4
+		cost = 9
+			ai_will_do = {
+			factor = 1
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			add_ideas = FTP_Academy
+		}
+	}
+	focus = {
+		id = FTP_R_4
+		icon = GFX_focus_collectivist_ethos_focus
+		prerequisite = { focus = FTP_R_3 }
+		x = 0
+		y = 5
+		cost = 9
+			ai_will_do = {
+			factor = 1
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			add_ideas = FTP_Army_Reform_idea
+		}
+	}
+	focus = {
+		id = FTP_R_5
+		icon = GFX_focus_collectivist_ethos_focus
+		prerequisite = { focus = FTP_R_4 }
+		x = -2
+		y = 6
+		cost = 9
+			ai_will_do = {
+			factor = 1
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			create_corps_commander = {
+			name = "Matthew White"
+			portrait_path = "gfx/leaders/FAT/academy_officer.tga"
+			traits = {
+				career_officer
+				trait_reckless
+			}
+			skill = 1
+			attack_skill = 3
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 1
+		} custom_effect_tooltip = gen_1
+		}
+		completion_reward = {
+			create_corps_commander = {
+			name = "Arnold Gardner"
+			portrait_path = "gfx/leaders/FAT/academy_officer.tga"
+			traits = {
+				career_officer
+				trait_reckless
+			}
+			skill = 1
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 1
+		} custom_effect_tooltip = gen_2
+		}
+		completion_reward = {
+			create_corps_commander = {
+			name = "Logan Dickinson"
+			portrait_path = "gfx/leaders/FAT/academy_officer.tga"
+			traits = {
+				career_officer
+				trait_cautious
+			}
+			skill = 1
+			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 2
+		} custom_effect_tooltip = gen_3
+		}
+	}
+	focus = {
+		id = FTP_R_6
+		icon = GFX_focus_collectivist_ethos_focus
+		prerequisite = { focus = FTP_R_4 }
+		x = 0
+		y = 6
+		cost = 9
+			ai_will_do = {
+			factor = 1
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			add_ideas = FTP_Morale
+		}
+	}
+	focus = {
+		id = FTP_R_7
+		icon = GFX_focus_collectivist_ethos_focus
+		prerequisite = { focus = FTP_R_4 }
+		x = 2
+		y = 6
+		cost = 9
+			ai_will_do = {
+			factor = 1
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			add_ideas = FTP_Chain
+		}
+	}
+	focus = {
+		id = FTP_R_8
+		icon = GFX_focus_collectivist_ethos_focus
+		prerequisite = { focus = FTP_R_5 }
+		prerequisite = { focus = FTP_R_6 }
+		prerequisite = { focus = FTP_R_7 }
+		prerequisite = { focus = FTP_R_CRASH_2 focus = FTP_P_CRASH_2 }
+		x = 0
+		y = 7
+		cost = 9
+			ai_will_do = {
+			factor = 1
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			add_ideas = FTP_army_idea
+			add_stability = 0.05
+		}
+	}
+	focus = {
+		id = FTP_R_9
+		icon = GFX_focus_collectivist_ethos_focus
+		prerequisite = { focus = FTP_R_8 }
+		x = 0
+		y = 8
+		cost = 9
+			ai_will_do = {
+			factor = 1
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 7
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 4
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = FTP_R_10
+		icon = GFX_focus_collectivist_ethos_focus
+		prerequisite = { focus = FTP_R_9 }
+		x = 0
+		y = 9
+		cost = 9
+			ai_will_do = {
+			factor = 1
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			add_stability = 0.15
+			add_war_support = 0.15
+			add_political_power = -50
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 1000
+			}
+		}
+	}
+	focus = {
+		id = FTP_R_11
+		icon = GFX_focus_collectivist_ethos_focus
+		prerequisite = { focus = FTP_R_10 }
+		x = -2
+		y = 10
+		cost = 9
+			ai_will_do = {
+			factor = 1
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			add_state_claim = 98
+			add_state_claim = 69
+			add_state_claim = 79
+			add_state_claim = 100
+		}
+	}
+	focus = {
+		id = FTP_R_12
+		icon = GFX_focus_collectivist_ethos_focus
+		prerequisite = { focus = FTP_R_10 }
+		x = 0
+		y = 10
+		cost = 9
+			ai_will_do = {
+			factor = 1
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			hidden_effect = {
+				country_event = { days = 30 id = police.4 }
+			}
+			FYB = {
+				country_event = police.6
+				every_owned_state = {
+					add_province_modifier = {
+						static_modifiers = { unplanned_offensive }
+						province = {
+							all_provinces = yes
+						}
+					}
+				}
+			}
+			RHB = {
+				country_event = police.6
+				every_owned_state = {
+					add_province_modifier = {
+						static_modifiers = { unplanned_offensive }
+						province = {
+							all_provinces = yes
+						}
+					}
+				}
+			}
+			KTB = {
+				country_event = police.6
+				every_owned_state = {
+					add_province_modifier = {
+						static_modifiers = { unplanned_offensive }
+						province = {
+							all_provinces = yes
+						}
+					}
+				}
+			}
+			TDB = {
+				country_event = police.6
+				every_owned_state = {
+					add_province_modifier = {
+						static_modifiers = { unplanned_offensive }
+						province = {
+							all_provinces = yes
+						}
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = FTP_R_13
+		icon = GFX_focus_collectivist_ethos_focus
+		prerequisite = { focus = FTP_R_10 }
+		x = 2
+		y = 10
+		cost = 9
+			ai_will_do = {
+			factor = 1
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			hidden_effect = {
+				country_event = { days = 30 id = police.5 }
+			}
+			GSF = {
+				country_event = police.6
+				every_owned_state = {
+					add_province_modifier = {
+						static_modifiers = { unplanned_offensive }
+						province = {
+							all_provinces = yes
+						}
+					}
+				}
+			}
+			TDF = {
+				country_event = police.6
+				every_owned_state = {
+					add_province_modifier = {
+						static_modifiers = { unplanned_offensive }
+						province = {
+							all_provinces = yes
+						}
+					}
+				}
+			}
+			SBF = {
+				country_event = police.6
+				every_owned_state = {
+					add_province_modifier = {
+						static_modifiers = { unplanned_offensive }
+						province = {
+							all_provinces = yes
+						}
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = FTP_R_14
+		icon = GFX_focus_collectivist_ethos_focus
+		prerequisite = { focus = FTP_R_11 }
+		prerequisite = { focus = FTP_R_12 }
+		prerequisite = { focus = FTP_R_13 }
+		x = 0
+		y = 11
+		cost = 9
+			ai_will_do = {
+			factor = 1
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			add_political_power = 150
+			add_stability = 0.01
+		}
+	}
+	focus = {
+		id = FTP_R_15
+		icon = GFX_focus_collectivist_ethos_focus
+		prerequisite = { focus = FTP_R_8 }
+		x = -2
+		y = 8
+		cost = 9
+			ai_will_do = {
+			factor = 1
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			add_manpower = 500
+			add_ideas = FTP_Prizuv
+		}
+	}
+	focus = {
+		id = FTP_R_16
+		icon = GFX_focus_collectivist_ethos_focus
+		prerequisite = { focus = FTP_R_9 }
+		x = 2
+		y = 9
+		cost = 9
+			ai_will_do = {
+			factor = 1
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			set_country_flag = thomas_anderson
+			custom_effect_tooltip = available_chief_of_army
+			show_ideas_tooltip = Thomas_Anderson
+		}
+	}
+	
+	focus = {
+		id = FTP_P_1
+		icon = GFX_focus_collectivist_ethos_focus
+		prerequisite = { focus = FTP_P }
+		x = 8
+		y = 3
+		cost = 9
+			ai_will_do = {
+			factor = 1
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_1
+				amount = 2000
+			}
+			add_equipment_to_stockpile = {
+				type = motorized_equipment
+				amount = 200
+			}
+		}
+	}
+	focus = {
+		id = FTP_P_2
+		icon = GFX_focus_collectivist_ethos_focus
+		prerequisite = { focus = FTP_P }
+		x = 10
+		y = 3
+		cost = 9
+			ai_will_do = {
+			factor = 1
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			add_manpower = 3000
+		}
+	}
+	focus = {
+		id = FTP_P_3
+		icon = GFX_focus_collectivist_ethos_focus
+		prerequisite = { focus = FTP_P }
+		x = 12
+		y = 3
+		cost = 9
+			ai_will_do = {
+			factor = 1
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 7
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 4
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = FTP_P_4
+		icon = GFX_focus_collectivist_ethos_focus
+		prerequisite = { focus = FTP_P }
+		x = 14
+		y = 3
+		cost = 9
+			ai_will_do = {
+			factor = 1
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			add_timed_idea = {
+				idea = FTP_Removing_Troublesome_Soldiers
+				days = 180
+			}
+			add_political_power = 50
+			add_stability = 0.05
+		}
+	}
+	focus = {
+		id = FTP_P_5
+		icon = GFX_focus_collectivist_ethos_focus
+		prerequisite = { focus = FTP_P_2 }
+		x = 10
+		y = 4
+		cost = 9
+			ai_will_do = {
+			factor = 1
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			army_experience = 75
+			add_political_power = 50
+			add_war_support = 0.05
+		}
+	}
+	focus = {
+		id = FTP_P_6
+		icon = GFX_focus_collectivist_ethos_focus
+		prerequisite = { focus = FTP_P_3 }
+		x = 12
+		y = 4
+		cost = 9
+			ai_will_do = {
+			factor = 1
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			add_ideas = FTP_loyal_army_idea
+		}
+	}
+	focus = {
+		id = FTP_P_7
+		icon = GFX_focus_collectivist_ethos_focus
+		prerequisite = { focus = FTP_P_4 }
+		x = 14
+		y = 4
+		cost = 9
+			ai_will_do = {
+			factor = 1
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			add_stability = 0.1
+		}
+	}
+	focus = {
+		id = FTP_P_8
+		icon = GFX_focus_collectivist_ethos_focus
+		prerequisite = { focus = FTP_P_5 }
+		prerequisite = { focus = FTP_P_6 }
+		prerequisite = { focus = FTP_P_7 }
+		x = 12
+		y = 5
+		cost = 9
+			ai_will_do = {
+			factor = 1
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			add_ideas = FTP_sverh
+			hidden_effect = {
+				country_event = { id = police.8 days = 33 }
+			}
+		}
+	}
+	focus = {
+		id = FTP_P_9
+		icon = GFX_focus_collectivist_ethos_focus
+		prerequisite = { focus = FTP_P_8 }
+		prerequisite = { focus = FTP_R_CRASH_2 focus = FTP_P_CRASH_2 }
+		x = 12
+		y = 7
+		cost = 1
+			ai_will_do = {
+			factor = 1
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			hidden_effect = {
+				remove_ideas = FTP_sverh
+			}
+			add_stability = -0.03
+		}
+	}
+	focus = {
+		id = FTP_P_10
+		icon = GFX_focus_collectivist_ethos_focus
+		prerequisite = { focus = FTP_P_9 }
+		x = 9
+		y = 8
+		cost = 9
+			ai_will_do = {
+			factor = 1
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			add_manpower = 1000
+		}
+	}
+	focus = {
+		id = FTP_P_11
+		icon = GFX_focus_collectivist_ethos_focus
+		prerequisite = { focus = FTP_P_9 }
+		x = 15
+		y = 8
+		cost = 9
+			ai_will_do = {
+			factor = 1
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_1
+				amount = 1000
+			}
+		}
+	}
+	focus = {
+		id = FTP_P_12
+		icon = GFX_focus_collectivist_ethos_focus
+		prerequisite = { focus = FTP_P_9 }
+		x = 12
+		y = 8
+		cost = 9
+			ai_will_do = {
+			factor = 1
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			remove_ideas = FTP_oops
+		}
+	}
+	focus = {
+		id = FTP_P_13
+		icon = GFX_focus_collectivist_ethos_focus
+		prerequisite = { focus = FTP_P_12 }
+		x = 11
+		y = 9
+		cost = 2
+			ai_will_do = {
+			factor = 1
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			add_war_support = 0.1
+		}
+	}
+	focus = {
+		id = FTP_P_14
+		icon = GFX_focus_collectivist_ethos_focus
+		prerequisite = { focus = FTP_P_12 }
+		x = 13
+		y = 9
+		cost = 3
+			ai_will_do = {
+			factor = 1
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			add_stability = 0.02
+		}
+	}
+	focus = {
+		id = FTP_P_15
+		icon = GFX_focus_collectivist_ethos_focus
+		prerequisite = { focus = FTP_P_13 }
+		prerequisite = { focus = FTP_P_14 }
+		x = 12
+		y = 10
+		cost = 9
+			ai_will_do = {
+			factor = 1
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			hidden_effect = {
+				country_event = { days = 30 id = police.4 }
+			}
+			FYB = {
+				country_event = police.6
+				every_owned_state = {
+					add_province_modifier = {
+						static_modifiers = { unplanned_offensive }
+						province = {
+							all_provinces = yes
+						}
+					}
+				}
+			}
+			RHB = {
+				country_event = police.6
+				every_owned_state = {
+					add_province_modifier = {
+						static_modifiers = { unplanned_offensive }
+						province = {
+							all_provinces = yes
+						}
+					}
+				}
+			}
+			KTB = {
+				country_event = police.6
+				every_owned_state = {
+					add_province_modifier = {
+						static_modifiers = { unplanned_offensive }
+						province = {
+							all_provinces = yes
+						}
+					}
+				}
+			}
+			TDB = {
+				country_event = police.6
+				every_owned_state = {
+					add_province_modifier = {
+						static_modifiers = { unplanned_offensive }
+						province = {
+							all_provinces = yes
+						}
+					}
+				}
+			}
+			hidden_effect = {
+				country_event = { days = 30 id = police.5 }
+			}
+			GSF = {
+				country_event = police.6
+				every_owned_state = {
+					add_province_modifier = {
+						static_modifiers = { unplanned_offensive }
+						province = {
+							all_provinces = yes
+						}
+					}
+				}
+			}
+			TDF = {
+				country_event = police.6
+				every_owned_state = {
+					add_province_modifier = {
+						static_modifiers = { unplanned_offensive }
+						province = {
+							all_provinces = yes
+						}
+					}
+				}
+			}
+			SBF = {
+				country_event = police.6
+				every_owned_state = {
+					add_province_modifier = {
+						static_modifiers = { unplanned_offensive }
+						province = {
+							all_provinces = yes
+						}
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = FTP_P_16
+		icon = GFX_focus_collectivist_ethos_focus
+		prerequisite = { focus = FTP_P_15 }
+		x = 12
+		y = 11
+		cost = 9
+			ai_will_do = {
+			factor = 1
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			add_stability = 0.1
+			add_political_power = 50
+		}
+	}
+}

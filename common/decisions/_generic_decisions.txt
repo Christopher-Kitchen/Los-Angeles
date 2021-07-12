@@ -1,0 +1,173 @@
+zakupka = {
+	avtomat_11 = {
+		cost = 5
+		available = {
+			has_political_power > 4
+			available_if_capitulated = no
+			check_variable = { money_reserves > 20 }
+        }
+		complete_effect = {
+			add_equipment_to_stockpile = { type = infantry_equipment amount = 50 }
+			subtract_from_variable = { money_reserves = 20 }
+			calculate_display_variables = yes
+		}
+    }
+	avtomat_12 = {
+		cost = 7
+		available = {
+			has_political_power > 6
+			available_if_capitulated = no
+			check_variable = { money_reserves > 40 }
+        }
+		complete_effect = {
+			add_equipment_to_stockpile = { type = infantry_equipment amount = 100 }
+			subtract_from_variable = { money_reserves = 40 }
+			calculate_display_variables = yes
+		}
+    }
+	avtomat_13 = {
+		cost = 10
+		available = {
+			has_political_power > 9
+			available_if_capitulated = no
+			check_variable = { money_reserves > 80 }
+        }
+		complete_effect = {
+			add_equipment_to_stockpile = { type = infantry_equipment amount = 200 }
+			subtract_from_variable = { money_reserves = 80 }
+			calculate_display_variables = yes
+		}
+    }
+	avtomat_21 = {
+		cost = 5
+		available = {
+			has_political_power > 4
+			available_if_capitulated = no
+			check_variable = { money_reserves > 42.5 }
+        }
+		complete_effect = {
+			add_equipment_to_stockpile = { type = infantry_equipment_1 amount = 50 }
+			subtract_from_variable = { money_reserves = 42.5 }
+			calculate_display_variables = yes
+		}
+    }
+	avtomat_22 = {
+		cost = 7
+		available = {
+			has_political_power > 6
+			available_if_capitulated = no
+			check_variable = { money_reserves > 85 }
+        }
+		complete_effect = {
+			add_equipment_to_stockpile = { type = infantry_equipment_1 amount = 100 }
+			subtract_from_variable = { money_reserves = 85 }
+			calculate_display_variables = yes
+		}
+    }
+	avtomat_23 = {
+		cost = 10
+		available = {
+			has_political_power > 9
+			available_if_capitulated = no
+			check_variable = { money_reserves > 170 }
+        }
+		complete_effect = {
+			add_equipment_to_stockpile = { type = infantry_equipment_1 amount = 200 }
+			subtract_from_variable = { money_reserves = 170 }
+			calculate_display_variables = yes
+		}
+    }
+	avtomat_31 = {
+		cost = 5
+		available = {
+			has_political_power > 4
+			available_if_capitulated = no
+			check_variable = { money_reserves > 75 }
+        }
+		complete_effect = {
+			add_equipment_to_stockpile = { type = infantry_equipment_2 amount = 50 }
+			subtract_from_variable = { money_reserves = 75 }
+			calculate_display_variables = yes
+		}
+    }
+	avtomat_32 = {
+		cost = 7
+		available = {
+			has_political_power > 6
+			available_if_capitulated = no
+			check_variable = { money_reserves > 150 }
+        }
+		complete_effect = {
+			add_equipment_to_stockpile = { type = infantry_equipment_2 amount = 100 }
+			subtract_from_variable = { money_reserves = 150 }
+			calculate_display_variables = yes
+		}
+    }
+	avtomat_33 = {
+		cost = 10
+		available = {
+			has_political_power > 9
+			available_if_capitulated = no
+			check_variable = { money_reserves > 300 }
+        }
+		complete_effect = {
+			add_equipment_to_stockpile = { type = infantry_equipment_2 amount = 200 }
+			subtract_from_variable = { money_reserves = 300 }
+			calculate_display_variables = yes
+		}
+    }
+	avtomat_41 = {
+		cost = 5
+		available = {
+			has_political_power > 4
+			available_if_capitulated = no
+			check_variable = { money_reserves > 105 }
+        }
+		complete_effect = {
+			add_equipment_to_stockpile = { type = infantry_equipment_3 amount = 50 }
+			subtract_from_variable = { money_reserves = 105 }
+			calculate_display_variables = yes
+		}
+    }
+	avtomat_42 = {
+		cost = 7
+		available = {
+			has_political_power > 6
+			available_if_capitulated = no
+			check_variable = { money_reserves > 210 }
+        }
+		complete_effect = {
+			add_equipment_to_stockpile = { type = infantry_equipment_3 amount = 100 }
+			subtract_from_variable = { money_reserves = 210 }
+			calculate_display_variables = yes
+		}
+    }
+	avtomat_43 = {
+		cost = 10
+		available = {
+			has_political_power > 9
+			available_if_capitulated = no
+			check_variable = { money_reserves > 420 }
+        }
+		complete_effect = {
+			add_equipment_to_stockpile = { type = infantry_equipment_3 amount = 200 }
+			subtract_from_variable = { money_reserves = 420 }
+			calculate_display_variables = yes
+		}
+    }
+    dopka = {
+	cost = 10
+	days_re_enable = 30
+	available = {
+            has_political_power > 9
+			available_if_capitulated = no
+			check_variable = { money_reserves > 20 }
+        }
+	
+	complete_effect = {
+		add_equipment_to_stockpile = { type = support_equipment_1 amount = 50 }
+		subtract_from_variable = { money_reserves = 20 }
+		calculate_display_variables = yes
+	}
+    }
+}
