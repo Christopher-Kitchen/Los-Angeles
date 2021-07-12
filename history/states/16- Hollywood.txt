@@ -1,0 +1,12 @@
+state={
+	id=16
+	name="Hollywood"
+	provinces={
+	850
+	316
+	1001
+	}
+	manpower= 231954
+	buildings_max_level_factor=1.000
+	state_category = large_city
+}

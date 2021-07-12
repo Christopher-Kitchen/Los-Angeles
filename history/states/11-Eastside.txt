@@ -1,0 +1,13 @@
+state={
+	id=11
+	name="Eastside"
+	provinces={
+799
+417
+975
+802
+	}
+	manpower=310020
+	buildings_max_level_factor=1.000
+	state_category = large_city
+}

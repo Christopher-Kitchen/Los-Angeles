@@ -1,0 +1,13 @@
+state={
+	id=7
+	name="Long Beach"
+	provinces={
+		1023 
+		639
+		574
+		573
+	}
+	manpower=604675
+	buildings_max_level_factor=7.000
+	state_category = large_city
+}

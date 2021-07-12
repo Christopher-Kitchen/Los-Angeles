@@ -1,0 +1,11 @@
+state={
+	id=9
+	name="Torrance"
+	provinces={
+45
+983
+	}
+	manpower=305756
+	buildings_max_level_factor=4.000
+	state_category = large_city
+}

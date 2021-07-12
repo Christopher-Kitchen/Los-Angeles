@@ -1,0 +1,14 @@
+state={
+	id=10
+	name="South Central"
+	provinces={
+618
+1067
+443
+34
+199
+	}
+	manpower=1327112
+	buildings_max_level_factor=1.000
+	state_category = large_city
+}

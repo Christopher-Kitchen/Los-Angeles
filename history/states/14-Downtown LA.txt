@@ -1,0 +1,10 @@
+state={
+	id=14
+	name="Downtown Los Angeles"
+	provinces={
+	832
+	}
+	manpower= 48532
+	buildings_max_level_factor=1.000
+		state_category = large_city
+}

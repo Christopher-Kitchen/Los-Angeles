@@ -1,0 +1,16 @@
+state={
+	id=2
+	name="Catalina"
+	provinces={
+307 
+450
+937
+289
+621
+1243
+
+	}	
+	manpower=4096
+	buildings_max_level_factor=1.000
+	state_category = small_island
+}

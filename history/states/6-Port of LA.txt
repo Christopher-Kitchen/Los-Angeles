@@ -1,0 +1,11 @@
+state={
+	id=6
+	name="Port of Los Angeles"
+	provinces={
+		92
+		660
+	}
+	manpower=298693
+	buildings_max_level_factor=5.000
+	state_category = large_city
+}

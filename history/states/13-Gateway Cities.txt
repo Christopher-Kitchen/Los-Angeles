@@ -1,0 +1,15 @@
+state={
+	id=13
+	name="Gateway Cities"
+	provinces={
+	508
+	787
+	823
+	953
+	1102
+	478
+	}
+	manpower=421900
+	buildings_max_level_factor=6.000
+	state_category = large_city
+}

@@ -1,0 +1,12 @@
+state={
+	id=12
+	name="South Cities"
+	provinces={
+		1150
+		917
+		997
+	}
+	manpower=412512
+	buildings_max_level_factor=1.000
+	state_category = large_city
+}

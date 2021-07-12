@@ -1,0 +1,11 @@
+state={
+	id=4
+	name="Beach Cities"
+	provinces={
+		226
+		1024
+	}
+	manpower=147582
+	buildings_max_level_factor=1.000
+	state_category = large_town
+}

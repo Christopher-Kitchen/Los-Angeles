@@ -1,0 +1,14 @@
+state={
+	id=15
+	name="West Los Angeles"
+	provinces={
+	968
+	784
+	657
+	511
+	1186
+	}
+	manpower=856000
+	buildings_max_level_factor=1.000
+	state_category = large_city
+}
