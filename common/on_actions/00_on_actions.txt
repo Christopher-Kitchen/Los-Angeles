@@ -2,23 +2,7 @@ on_actions = {
 	# country 
 	on_startup = {
 		effect = {
-			GSF = { country_event = { id = Start.1 } }
-			SBF = { country_event = { id = Start.1 } }
-			VLA = { country_event = { id = Start.2 } }
-			LSV = { country_event = { id = Start.3 } }
-			RHB = { country_event = { id = Start.4 } }
-			KTB = { country_event = { id = Start.4 } }
-			FYB = { country_event = { id = Start.4 } }
-			
-			GSF = { country_event = { id = Start.5 } }
-			VLA = { country_event = { id = Start.5 } }
-			LSV = { country_event = { id = Start.5 } }
-			RHB = { country_event = { id = Start.5 } }
-			KTB = { country_event = { id = Start.5 } }
-			FYB = { country_event = { id = Start.5 } }
-			SBF = { country_event = { id = Start.5 } }
-			CIT = { country_event = { id = city.9 days = 101 } }
-			NGP = { country_event = { id = Start.8 days = 1 } }
+			#
         }
  	}
 }
