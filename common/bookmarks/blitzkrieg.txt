@@ -7,33 +7,10 @@ bookmarks = {
 		default_country = "CIT"
 		default = yes
 		
-		"CIT"={
-			history = ""
-		}
-		"FTP"={
-			history = ""
-		}
-		"GSF"={
-			history = "GSF_GATHERING_STORM_DESC"
-		}
-		"FYB"={
-			history = "FYB_GATHERING_STORM_DESC"
-		}
-		"LSV"={
-			history = "LSV_GATHERING_STORM_DESC"
-		}
-		"VLA"={
-			history = "VLA_GATHERING_STORM_DESC"
-		}
-		"RHB"={
-			history = "RHB_GATHERING_STORM_DESC"
-		}
-		"KTB"={
-			history = "KTB_GATHERING_STORM_DESC"
-		}
-		"SBF"={
-			history = "SBF_GATHERING_STORM_DESC"
-		}
+		#"CIT"={
+		#	history = ""
+		#}
+		
 		effect = {
 			randomize_weather = 22345 # <- Obligatory in every bookmark !
 			#123 = { rain_light = yes }
